@@ -1,0 +1,762 @@
+:root{--purple:#1F1D24;--lavender:#D6CFE3;--lime:#BBA8DD;--cream:#EDEBE6;--line:rgba(214,207,227,.28)}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--purple);color:var(--cream);font:17px/1.6 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--lime);outline-offset:7px}::selection{background:var(--lime);color:var(--purple)}.progress{height:3px;background:var(--lime);position:fixed;left:0;top:0;width:0;z-index:100}.skip{position:fixed;left:20px;top:-100px;z-index:101;background:var(--cream);color:var(--purple);padding:10px}.skip:focus{top:10px}header{height:106px;margin:0 4.5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:31}.brand{display:flex;align-items:center;gap:15px;color:var(--lavender);font-size:20px;line-height:1.12;letter-spacing:-.5px}.brand svg{width:55px;fill:none;stroke:currentColor;stroke-width:1.7}.header-note{font-size:12px;letter-spacing:.1em}.menu-toggle{background:none;border:0;border-bottom:1px solid var(--lime);padding:0;color:var(--lime);font-size:17px}.menu-toggle span{margin-left:18px;font-size:20px}nav{position:fixed;inset:0;background:var(--purple);padding:140px 12% 60px;z-index:30;overflow:auto}nav:not([hidden]){display:flex;flex-direction:column;justify-content:center}nav a{font:italic clamp(32px,5vw,70px)/1.4 Georgia,serif;color:var(--lavender);border-bottom:1px solid var(--line)}nav a:hover{color:var(--lime)}nav small{font:12px Arial;float:right;margin-top:20px}body.menu-open{overflow:hidden}body.menu-open header{position:fixed;top:0;left:0;right:0}section{padding:100px 9%;position:relative;overflow:hidden}h1,h2,h3,p,figure{margin:0}h2{font:normal clamp(36px,4.2vw,66px)/1.08 Georgia,'Times New Roman',serif;letter-spacing:-.04em}h2 em{font-weight:normal}h3{font-weight:normal}.hero{padding:32px 9% 30px;min-height:850px}.hero-top{display:flex;justify-content:space-between;font-size:11px;line-height:1.5;text-transform:uppercase;letter-spacing:.12em;color:var(--lavender)}.hero-composition{position:relative;min-height:665px;max-width:1350px;margin:auto}.hero-portrait{position:absolute;right:4%;top:47px;width:40%;height:540px;overflow:hidden}.hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 34%;filter:saturate(.75);animation:portraitIn 1.8s ease both}.hero h1{position:absolute;top:50px;left:3%;z-index:2;color:var(--lime);font:italic clamp(65px,7.7vw,124px)/.98 Georgia,serif;letter-spacing:-.065em;pointer-events:none}.hero h1 span{display:block;animation:textIn 1.3s cubic-bezier(.2,.7,.2,1) both}.hero h1 span:nth-child(2){margin-left:8vw;animation-delay:.2s}.intro{position:absolute;top:330px;left:3%;width:36%;font-size:18px;line-height:1.55}.credential{color:var(--lavender);font-size:12px;line-height:1.5;margin-top:20px}.oval{display:inline-flex;justify-content:space-between;align-items:center;gap:20px;border:1px solid var(--lime);color:var(--lime);border-radius:50%;min-height:70px;padding:20px 30px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;transition:.35s;margin-top:28px}.oval:hover{background:var(--lime);color:var(--purple);transform:rotate(-3deg)}.oval span{font-size:22px}.portrait-label{position:absolute;right:4%;top:605px;text-transform:uppercase;letter-spacing:.14em;font-size:10px;color:var(--lavender)}.scroll-cue{display:flex;gap:20px;font-size:11px;text-transform:uppercase;letter-spacing:.12em;align-items:center}.scroll-cue span{font-size:26px}.eyebrow{display:block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:60px}.large{font-size:clamp(45px,6.8vw,108px);line-height:1.07;letter-spacing:-.045em}.opening{padding-top:100px;color:var(--lavender)}.opening h2 em{color:var(--lime)}.prose p+p{margin-top:22px}.prose{font-size:17px;line-height:1.7}.offset{margin:60px 0 20px 53%;max-width:460px}.thread-art{height:400px;position:relative;margin:0 -11% -65px}.thread-art svg{height:100%;width:100%;fill:none;stroke:var(--lime);stroke-width:1;opacity:.6}.thread-art span{position:absolute;top:35%;left:16%;font:italic 35px/1.1 Georgia;color:var(--cream)}.light{background:var(--cream);color:var(--purple)}.two-column{display:grid;grid-template-columns:1fr 1fr;gap:11%}.approach h2{position:sticky;top:100px;line-height:1.25}.approach strong{font-weight:700}.focus{background:var(--lavender);color:var(--purple);padding-bottom:90px}.focus .eyebrow{margin-bottom:35px}.focus h2{margin-bottom:70px;line-height:1.24}.focus-list{margin-left:28%}details{border-top:1px solid currentColor;padding:18px 0}summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:20px;line-height:1.3}summary::-webkit-details-marker{display:none}summary span{font-size:26px;font-weight:normal;transition:transform .25s}details[open] summary span{transform:rotate(45deg)}details p{margin:20px 0 10px;max-width:600px;font-size:16px}details ul{padding-left:18px}details li{margin:15px 0;font-size:15px}details small{font-size:13px;opacity:.75}.focus-list details:last-child{border-bottom:1px solid}.focus-list summary{font:normal clamp(22px,2.4vw,34px)/1.25 Georgia}.focus-list .number{font:10px Arial;margin-right:20px;opacity:.6}.confidential{display:grid;grid-template-columns:90px 1fr;max-width:700px;margin:85px 0 0}.small-symbol{font-size:58px;line-height:1}.confidential h3{font:28px Georgia;margin-bottom:18px}.confidential p{font-size:14px;line-height:1.8}.about-grid{display:grid;grid-template-columns:42% 1fr;gap:12%}.about-portrait{padding-top:70px}.about-portrait img{width:100%;height:560px;object-fit:cover;object-position:center 25%;border-radius:48% 48% 0 0}.about-portrait figcaption{font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:15px}.about h2{margin-bottom:35px;line-height:1.24}.about .prose{margin-bottom:40px}.statement{padding:145px 9% 175px;color:var(--lavender);text-align:center}.statement em{color:var(--lime)}.statement .eyebrow{margin-bottom:40px}.orbit{position:absolute;bottom:10px;width:45%;height:140px;left:28%;fill:none;stroke:var(--lime);stroke-width:.7}.conditions h2{margin-bottom:35px}.conditions .prose{font-size:16px}.text-link{display:inline-block;border-bottom:1px solid;margin-top:28px;font-size:13px}.facts{padding-top:5px}.fact{padding:0 0 30px;margin-bottom:30px;border-bottom:1px solid #1F1D2444}.fact span{font-size:11px;text-transform:uppercase;letter-spacing:.08em}.fact h3{font:50px Georgia;letter-spacing:-.04em;margin:10px 0}.fact p{font-size:15px;line-height:1.7}.facts details{border-top:0;padding-top:0}.contact{padding-bottom:30px}.contact h2{color:var(--lavender);margin-bottom:65px}.contact h2 em{color:var(--lime)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:11%;margin-bottom:110px}.contact-link{display:block;font:26px/1.6 Georgia}.contact-link.email{font-size:clamp(15px,1.8vw,25px);margin:6px 0 25px;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding-top:25px;display:flex;justify-content:space-between;font-size:15px}footer small{font-size:10px;color:var(--lavender);line-height:1.5;display:block;margin-top:8px}footer button{background:none;border:0;font-size:11px;margin-right:18px;padding:0}footer a{font-size:28px}dialog{background:var(--cream);color:var(--purple);border:0;padding:50px;max-width:650px;width:90%;max-height:85vh}dialog::backdrop{background:#0d0c10cf;backdrop-filter:blur(8px)}dialog h2{font-size:35px;margin-bottom:25px}dialog p{margin-top:20px;font-size:15px}.close-dialog{position:absolute;right:20px;top:10px;border:0;background:none;font-size:30px}.reveal{opacity:1}.js-motion .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1.2s cubic-bezier(.2,.7,.2,1)}.js-motion .reveal.visible{opacity:1;transform:translateY(0)}@keyframes textIn{from{opacity:0;transform:translateY(45px)}to{opacity:1;transform:translateY(0)}}@keyframes portraitIn{from{transform:scale(1.1);opacity:0}to{transform:scale(1);opacity:1}}@media(min-width:1600px){section{padding-left:max(9%,calc((100vw - 1400px)/2));padding-right:max(9%,calc((100vw - 1400px)/2))}.hero h1{font-size:125px}}@media(max-width:800px){header{height:90px;margin:0 6%}.header-note{display:none}section{padding:75px 7%}.hero{padding:28px 7% 30px;min-height:990px}.hero-top{font-size:9px;gap:20px}.hero-top span:last-child{text-align:right}.hero-composition{min-height:820px}.hero-portrait{top:60px;right:0;width:72%;height:430px}.hero h1{top:80px;left:-1%;font-size:clamp(54px,9.5vw,78px);line-height:1.02}.hero h1 span:nth-child(2){margin-left:0;max-width:400px}.intro{top:540px;left:0;width:90%;font-size:18px}.portrait-label{top:505px;right:0}.eyebrow{margin-bottom:35px}.large{font-size:clamp(42px,8.6vw,65px)}.offset{margin:40px 0 0 20%}.two-column{grid-template-columns:1fr;gap:40px}.approach h2{position:static}.thread-art{height:300px}.thread-art span{font-size:25px;left:12%}.focus-list{margin-left:0}.focus h2{margin-bottom:45px}.confidential{grid-template-columns:60px 1fr}.small-symbol{font-size:40px}.about-grid{grid-template-columns:1fr;gap:50px}.about-portrait{padding-top:0;width:80%;max-width:420px}.about-portrait img{height:420px}.about h2{font-size:45px}.statement{padding:100px 5% 150px}.orbit{width:80%;left:10%}.contact-grid{grid-template-columns:1fr;gap:50px;margin-bottom:65px}.contact h2{margin-bottom:45px}.contact-link{font-size:25px}.contact-link.email{font-size:20px}footer{gap:25px;flex-direction:column}footer>div:last-child{display:flex;align-items:center;justify-content:space-between}.prose{font-size:16px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js-motion .reveal{opacity:1;transform:none}}
+/* Reference motion: chapter track, individual type, image layers and curtain. */
+html{overflow-x:hidden}.progress{width:100%;transform:scaleX(var(--chapter-progress,0));transform-origin:left center;transition:none}.page-curtain{position:fixed;inset:0;background:var(--lavender);z-index:200;pointer-events:none}.motion-word{display:inline-block;white-space:nowrap}.motion-letter{display:inline-block}.hero h1>span{animation:none}.hero-portrait img{animation:none}.motion-ready .motion-reveal{opacity:0;transform:translateY(50px);transition:opacity 1.5s cubic-bezier(.165,.84,.44,1),transform 2s cubic-bezier(.165,.84,.44,1)}.motion-ready .motion-reveal.visible{opacity:1;transform:none}.story-line{display:block;white-space:nowrap}.confidential-panel{background:var(--lavender);color:var(--purple)}.confidential-panel .confidential{margin-top:50px}.confidential-panel .large{font-size:clamp(45px,5.8vw,86px);line-height:1.24}.thread-art path{will-change:stroke-dashoffset}.hero h1,.hero-portrait img,.story-line{will-change:translate}.about-portrait{overflow:hidden}.about-portrait img{will-change:transform}.oval{position:relative;isolation:isolate;overflow:hidden;transition:color .8s cubic-bezier(.87,0,.13,1)}.oval::before{content:'';position:absolute;inset:-50% -15%;border-radius:50%;background:var(--lime);z-index:-1;transform:translateY(115%);transition:transform 1s cubic-bezier(.87,0,.13,1)}.oval:hover{transform:none;background:transparent;color:var(--purple)}.oval:hover::before{transform:translateY(0)}nav:not([hidden]){animation:menuReveal .75s cubic-bezier(.87,0,.13,1) both}nav:not([hidden]) a{animation:menuItemIn 1s cubic-bezier(.165,.84,.44,1) both}nav a:nth-child(2){animation-delay:.08s}nav a:nth-child(3){animation-delay:.16s}nav a:nth-child(4){animation-delay:.24s}nav a:nth-child(5){animation-delay:.32s}nav.is-closing{animation:menuClose .65s cubic-bezier(.87,0,.13,1) both;pointer-events:none}.brand svg{animation:slowTurn 45s linear infinite}.scroll-cue span{animation:scrollNudge 2.5s ease-in-out infinite}@keyframes menuReveal{from{clip-path:ellipse(10% 0 at 95% 0)}to{clip-path:ellipse(160% 160% at 95% 0)}}@keyframes menuClose{from{clip-path:ellipse(160% 160% at 95% 0)}to{clip-path:ellipse(10% 0 at 95% 0)}}@keyframes menuItemIn{from{opacity:0;transform:translateY(55px)}to{opacity:1;transform:none}}@keyframes slowTurn{to{rotate:360deg}}@keyframes scrollNudge{0%,100%{translate:0 0}50%{translate:0 7px}}
+.horizontal-story{overflow-x:clip}.horizontal-story header{position:fixed;top:0;left:0;right:0;margin:0;height:70px;padding:0 4.5%;background:#1F1D24e8;backdrop-filter:blur(12px)}.horizontal-story .brand{font-size:17px}.horizontal-story .brand svg{width:43px}.horizontal-story main{position:fixed;inset:0 auto auto 0;display:flex;width:max-content;height:100dvh;will-change:transform}.horizontal-story main>section{flex:none;height:100dvh;min-height:0;padding:110px 7vw 50px;width:100vw;overflow:hidden}.horizontal-story .eyebrow{margin-bottom:35px}.horizontal-story .large{font-size:clamp(54px,6.5vw,105px)}.horizontal-story .hero{display:flex;flex-direction:column}.horizontal-story .hero-top{flex:none}.horizontal-story .hero-composition{width:100%;height:auto;min-height:0;flex:1}.horizontal-story .hero h1{top:30px;left:0;font-size:clamp(65px,7.7vw,122px)}.horizontal-story .hero-portrait{right:3%;top:30px;width:42%;height:calc(100% - 55px)}.horizontal-story .intro{left:0;top:auto;bottom:25px;width:36%;font-size:clamp(14px,1.3vw,19px);line-height:1.5}.horizontal-story .credential{margin-top:14px;font-size:11px}.horizontal-story .oval{margin-top:18px;min-height:60px;padding:16px 26px;font-size:10px}.horizontal-story .portrait-label{top:auto;bottom:0;right:3%}.horizontal-story .scroll-cue{flex:none;margin-top:12px}.horizontal-story .scroll-cue span{display:inline-block;rotate:-90deg}.horizontal-story .opening{width:185vw;padding-right:7vw}.horizontal-story .opening .eyebrow{position:absolute;top:110px}.horizontal-story .opening h2{position:absolute;top:25vh;left:14vw;font-size:7vw;line-height:1.13}.horizontal-story .opening .offset{position:absolute;left:115vw;top:30vh;margin:0;width:40vw;max-width:600px;font-size:clamp(16px,1.5vw,22px)}.horizontal-story .thread-art{position:absolute;bottom:0;left:0;width:185vw;height:40vh;margin:0;pointer-events:none}.horizontal-story .thread-art span{left:68%;top:60%;font-size:2.2vw}.horizontal-story .approach{width:155vw}.horizontal-story .two-column{grid-template-columns:40vw 1fr;gap:10vw}.horizontal-story .approach h2{position:static;font-size:5.5vw}.horizontal-story .approach .prose{column-count:2;column-gap:4vw;font-size:clamp(15px,1.25vw,19px);line-height:1.7}.horizontal-story .approach .prose p{break-inside:avoid}.horizontal-story .focus{width:125vw}.horizontal-story .focus h2{position:absolute;top:27vh;left:7vw;width:43vw;font-size:5vw}.horizontal-story .focus-list{position:absolute;top:20vh;left:60vw;width:55vw;margin:0}.horizontal-story .focus-list summary,.horizontal-story .plain-topic{font-size:clamp(22px,2vw,32px)}.horizontal-story .focus-list details,.horizontal-story .plain-topic{padding:15px 0}.horizontal-story .focus-list details p{font-size:14px;margin:12px 0 3px;line-height:1.5}.horizontal-story .focus-list:has(details[open]){max-height:72vh;overflow-y:auto;padding-right:10px;scrollbar-width:thin}.horizontal-story .confidential-panel{width:105vw;display:flex;flex-direction:column;justify-content:center}.horizontal-story .confidential-panel .eyebrow{position:absolute;top:110px}.horizontal-story .confidential-panel h2{font-size:6vw}.horizontal-story .confidential-panel .confidential{margin:40px 0 0 25vw;max-width:60vw;grid-template-columns:7vw 1fr}.horizontal-story .confidential-panel .confidential h3{display:none}.horizontal-story .confidential-panel .confidential p{font-size:clamp(15px,1.3vw,20px)}.horizontal-story .about{width:165vw}.horizontal-story .about-grid{grid-template-columns:32vw 1fr;gap:10vw}.horizontal-story .about-portrait{padding:0}.horizontal-story .about-portrait img{height:calc(100vh - 220px);border-radius:46% 46% 0 0}.horizontal-story .about h2{font-size:4.5vw;margin-bottom:25px}.horizontal-story .about .prose{column-count:2;column-gap:4vw;max-width:85vw;font-size:clamp(15px,1.25vw,19px);margin-bottom:25px}.horizontal-story .about .prose p{break-inside:avoid}.horizontal-story .about details{display:inline-block;vertical-align:top;width:40vw;margin-right:3vw}.horizontal-story .about details summary{font-size:20px}.horizontal-story .about details ul{max-height:28vh;overflow-y:auto;scrollbar-width:thin}.horizontal-story .statement{width:130vw;display:flex;flex-direction:column;justify-content:center}.horizontal-story .statement .eyebrow{margin-top:-45px}.horizontal-story .statement .large{font-size:6.5vw}.horizontal-story .statement .orbit{bottom:30px;height:17vh;left:30%;width:40%}.horizontal-story .conditions{width:155vw}.horizontal-story .conditions .two-column{grid-template-columns:50vw 1fr;gap:12vw}.horizontal-story .conditions h2{font-size:4.2vw;margin-bottom:25px}.horizontal-story .conditions .prose{font-size:clamp(15px,1.25vw,19px);line-height:1.6}.horizontal-story .conditions .prose p+p{margin-top:15px}.horizontal-story .facts{display:grid;grid-template-columns:1fr 1fr;gap:30px 4vw}.horizontal-story .fact{padding-bottom:15px;margin-bottom:0}.horizontal-story .fact h3{font-size:43px}.horizontal-story .fact p{font-size:15px}.horizontal-story .facts details{align-self:start;margin-top:0}.horizontal-story .facts summary{font-size:20px}.horizontal-story .facts details p{font-size:14px}.horizontal-story .contact{width:110vw}.horizontal-story .contact h2{font-size:6vw;margin-bottom:35px}.horizontal-story .contact-grid{margin-bottom:35px;gap:8vw}.horizontal-story .contact-link{font-size:25px}.horizontal-story footer{padding-top:20px}.horizontal-story .contact .contact-grid p{font-size:15px}.horizontal-story .motion-reveal{transform:translateX(70px)}.horizontal-story .motion-reveal.visible{transform:none}@media(min-width:1000px) and (max-height:740px){.horizontal-story main>section{padding-top:100px;padding-bottom:35px}.horizontal-story .eyebrow{margin-bottom:25px}.horizontal-story .about .prose{font-size:15px;line-height:1.6}.horizontal-story .about h2{font-size:4vw}.horizontal-story .contact h2{font-size:5.5vw}.horizontal-story .conditions h2{font-size:3.8vw}.horizontal-story .contact-grid{margin-bottom:25px}.horizontal-story .focus-list{top:18vh}.horizontal-story .focus-list details,.horizontal-story .plain-topic{padding:11px 0}.horizontal-story .hero h1{font-size:min(7.3vw,100px)}.horizontal-story .intro{font-size:15px}}
+@media(max-width:999px){.story-line{white-space:normal}.confidential-panel .confidential{margin-top:35px}.motion-letter{will-change:auto}}@media(prefers-reduced-motion:reduce){.page-curtain{display:none}.motion-ready .motion-reveal{opacity:1;transform:none}.story-line{opacity:1!important;translate:none!important}.brand svg,.scroll-cue span{animation:none}.motion-word,.motion-letter{transform:none!important;opacity:1!important}.hero-portrait img{translate:none!important;scale:none!important}}
+.hero h1 .motion-word,.hero h1 .motion-letter{display:inline-block;margin-left:0;animation:none}.hero h1 .motion-word{white-space:nowrap}.hero h1 .motion-word:nth-child(2),.hero h1 .motion-letter:nth-child(2){margin-left:0;animation:none}
+
+/* Keep the supplied portrait uncropped at every breakpoint. */
+.about-portrait{overflow:visible}
+.about-portrait img,.horizontal-story .about-portrait img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:2 / 3;object-fit:contain;object-position:center top;border-radius:0;transform:none;will-change:auto}
+.horizontal-story .about-portrait img{width:auto;max-width:100%;height:calc(100dvh - 235px);aspect-ratio:2 / 3}
+
+/* Include the full Bezier loops and keep the SVG inside its section. */
+.thread-art{margin-bottom:0}
+.thread-art svg{display:block;overflow:visible}
+.horizontal-story .thread-art{bottom:24px;height:34vh}
+
+/* Show the complete start portrait without cover cropping or zoom. */
+.hero-portrait img,.horizontal-story .hero-portrait img{object-fit:contain;object-position:center top;transform:none;translate:none;scale:1;will-change:auto}
+
+/* Fine continuous threads connect the therapy chapters to the contact section. */
+main>section{isolation:isolate}
+.journey-line{position:absolute;right:0;top:0;width:30px;height:100%;z-index:-1;pointer-events:none;overflow:visible;fill:none;stroke:var(--lime);opacity:1}
+.journey-line path{stroke-width:.8;vector-effect:non-scaling-stroke}
+.light>.journey-line,.focus>.journey-line,.confidential-panel>.journey-line{stroke:var(--purple);opacity:1}
+.horizontal-story .journey-line{inset:auto 0 0;width:100%;height:170px}
+.horizontal-story .thread-art svg{visibility:hidden}
+@media(prefers-reduced-motion:reduce){.journey-line path{stroke-dashoffset:0!important}}
+
+/* The supplied drawing accompanies the opening chapter in the brand palette. */
+.opening-illustration{width:min(80%,400px);margin:45px auto}
+.opening-illustration img{display:block;width:100%;height:auto;object-fit:contain}
+.horizontal-story .opening{width:220vw}
+.horizontal-story .opening-illustration{position:absolute;left:94vw;top:18vh;width:36vw;height:65vh;margin:0}
+.horizontal-story .opening-illustration img{width:100%;height:100%;object-fit:contain}
+.horizontal-story .opening .offset{left:146vw;width:43vw}
+.horizontal-story .opening .thread-art{width:220vw}
+
+.opening-illustration img{filter:url(#illustration-brand-ink)}
+
+/* The drawn strand flows directly into the continuing website cord. */
+.thread-art svg{visibility:hidden}
+.opening>.journey-line{opacity:1}
+.opening>.journey-line path{stroke-width:1.05;stroke-linecap:round;stroke-linejoin:round}
+
+.opening-illustration.motion-reveal,.horizontal-story .opening-illustration.motion-reveal{transform:none}
+
+.horizontal-story .thread-art span{top:22%}
+
+/* A solid strand replaces the two hollow outlines. */
+.journey-line path:first-child,.opening>.journey-line path:first-child{stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+.journey-line path:nth-child(2){visibility:hidden}
+
+.brand svg{stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+
+.brand svg{stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+
+.opening>.journey-line path.cord-ribbon{fill:var(--lime);stroke:none}
+
+.brand-wordmark{display:flex;flex-direction:column;gap:4px}.brand-name{font-size:19px;line-height:1.1;letter-spacing:.12em}.brand-subtitle{font-size:11px;line-height:1.2;letter-spacing:.045em}
+
+.brand-wordmark{display:grid;grid-template-columns:max-content;gap:4px}.brand-name{margin-right:-.12em}.brand-subtitle{display:flex;justify-content:space-between;width:100%;letter-spacing:0}.brand-subtitle>span{display:block}
+
+.hero-portrait img{filter:url(#illustration-brand-ink)}
+/* Give the portrait its own space beside the headline and below it on phones. */
+.horizontal-story .hero h1{top:55px;font-size:7.2vw;line-height:1.04;max-width:60%}
+.horizontal-story .hero h1>span{white-space:nowrap}
+.horizontal-story .hero h1>span:nth-child(2){margin-left:2vw}
+.horizontal-story .hero-portrait{right:0;top:20px;width:40%;height:calc(100% - 25px)}
+.horizontal-story .intro{bottom:35px;width:40%}
+@media(max-width:999px){
+ .hero{min-height:0}
+ .hero-composition{min-height:930px}
+ .hero h1{top:20px;left:0;font-size:clamp(44px,11.5vw,82px);line-height:1.06;letter-spacing:-.045em;width:100%}
+ .hero h1>span:nth-child(2){margin-left:0;max-width:none}
+ .hero-portrait{top:150px;left:50%;right:auto;translate:-50% 0;width:85%;height:430px}
+ .intro{top:620px;left:0;width:100%}
+}
+
+/* Introduction beneath the portrait, revealed one line at a time. */
+.portrait-introduction{position:absolute;margin:0;color:var(--cream);font:15px/1.6 Arial,Helvetica,sans-serif;right:0;bottom:5px;width:45%}.portrait-introduction span{display:block}.horizontal-story .hero-portrait{height:calc(100% - 135px)}
+@media(max-width:999px){.portrait-introduction{top:605px;bottom:auto;right:7.5%;width:85%;font-size:15px}.hero-composition{min-height:1080px}.intro{top:790px}}
+
+/* Qualification stays with the introduction beneath the portrait. */
+.portrait-credential{position:absolute;right:0;bottom:0;width:45%;margin:0;color:var(--lavender);font-size:12px;line-height:1.5}.horizontal-story .portrait-introduction{bottom:65px}.horizontal-story .hero-portrait{height:calc(100% - 195px)}
+@media(max-width:999px){.portrait-credential{top:735px;right:7.5%;bottom:auto;width:85%;font-size:13px}.intro{top:835px}.hero-composition{min-height:1120px}}
+
+/* The welcome line belongs directly above the invitation. */
+.hero-top{justify-content:flex-end}.intro .cta-introduction{color:var(--lavender);font:11px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:0 0 22px}
+@media(max-width:999px){.intro .cta-introduction{font-size:11px}}
+
+/* Align the therapy descriptor with the left edge of the hero. */
+.hero-top{width:100%;justify-content:flex-start;text-align:left}.hero-top>span{margin-left:0;text-align:left}
+
+/* A shared left edge and tighter top spacing balance the headline. */
+.horizontal-story .hero h1{top:30px;left:0;line-height:1.08}.horizontal-story .hero h1>span:nth-child(2){margin-left:0}
+@media(max-width:999px){.hero h1{top:8px;left:0;line-height:1.08}.hero h1>span:nth-child(2){margin-left:0}}
+
+/* Center the introduction and qualification beneath the portrait. */
+.portrait-introduction,.portrait-credential{text-align:center}.horizontal-story .portrait-introduction,.horizontal-story .portrait-credential{width:40%;right:0}.horizontal-story .portrait-introduction{bottom:58px}.horizontal-story .portrait-credential{bottom:12px}
+@media(max-width:999px){.portrait-introduction,.portrait-credential{left:50%;right:auto;translate:-50% 0;width:85%;max-width:580px}.portrait-credential{top:720px}}
+
+/* Qualification above the personal introduction. */
+.horizontal-story .portrait-credential{bottom:110px}.horizontal-story .portrait-introduction{bottom:0}
+@media(max-width:999px){.portrait-credential{top:605px}.portrait-introduction{top:675px}}
+
+/* Stagger the second headline line as in the supplied reference. */
+.hero h1>span:nth-child(2),.horizontal-story .hero h1>span:nth-child(2){margin-left:.35em}
+
+/* Swap the two desktop hero columns without mirroring their contents. */
+.horizontal-story .hero-portrait{left:0;right:auto;width:36%}.horizontal-story .portrait-introduction,.horizontal-story .portrait-credential{left:0;right:auto;width:36%}.horizontal-story .hero h1{left:40%;max-width:60%;font-size:6.5vw}.horizontal-story .intro{left:40%;right:auto;width:60%}
+
+/* Static, left-aligned portrait copy. */
+.portrait-introduction,.portrait-credential{text-align:left}.portrait-introduction span{opacity:1;transform:none}
+
+/* Qualification follows the white introduction. */
+.horizontal-story .portrait-introduction{bottom:62px}.horizontal-story .portrait-credential{bottom:0}
+@media(max-width:999px){.portrait-introduction{top:605px}.portrait-credential{top:755px}.intro{top:850px}}
+
+/* Place the next-chapter invitation on the right. */
+.hero .scroll-cue,.horizontal-story .hero .scroll-cue{left:auto;right:7%;justify-content:flex-end;text-align:right}
+
+/* Lower both text groups while keeping their internal spacing. */
+.horizontal-story .portrait-introduction,.horizontal-story .portrait-credential,.horizontal-story .intro{transform:translateY(40px)}
+@media(max-width:999px){.portrait-introduction{top:645px}.portrait-credential{top:795px}.intro{top:890px}.hero-composition{min-height:1160px}}
+
+/* Use a centered arrow drawing rather than a font baseline. */
+.hero .scroll-cue span{position:relative;top:-3px}
+
+/* Larger main headline, preserving the staggered two-line layout. */
+.horizontal-story .hero h1{font-size:7.2vw}
+@media(max-width:999px){.hero h1{font-size:clamp(48px,12.5vw,90px)}}
+
+/* A subtle left and downward adjustment to the portrait. */
+.horizontal-story .hero-portrait{left:-24px;top:48px}
+@media(max-width:999px){.hero-portrait{left:calc(50% - 18px);top:174px}}
+
+/* Match the welcome line to the portrait bottom edge. */
+.horizontal-story .intro{bottom:auto;transform:none}
+
+/* Align the inset second headline line with the invitation below. */
+.horizontal-story .hero h1{left:calc(40% - .35em)}
+
+/* Increase size while keeping the second line anchored to the invitation. */
+.horizontal-story .hero h1{font-size:7.8vw;left:40%}.horizontal-story .hero h1>span:nth-child(1){margin-left:-.65em}.horizontal-story .hero h1>span:nth-child(2){margin-left:0}
+@media(max-width:999px){.hero h1{font-size:clamp(50px,13.2vw,96px)}.hero h1>span:nth-child(1){position:relative;left:-.2em}}
+
+/* Mobile layout uses content flow so text and images cannot overlap. */
+@media(max-width:999px){
+ header{height:82px;margin:0 6%}.brand{gap:10px}.brand svg{width:40px}.brand-name{font-size:18px}.menu-toggle{font-size:14px}.menu-toggle span{margin-left:10px}
+ .hero{padding:28px 7% 38px;min-height:0}.hero-top{font-size:9px;line-height:1.65;max-width:38em;margin-bottom:32px}.hero-top span:last-child{text-align:left}
+ .hero-composition{display:grid;grid-template-columns:minmax(0,1fr);min-height:0;height:auto;max-width:580px;gap:0}
+ .hero h1{grid-row:1;position:relative;inset:auto;margin:0 0 32px;width:100%;max-width:none;font-size:clamp(32px,9.3vw,76px);line-height:1.12;letter-spacing:-.055em;translate:none!important}
+ .hero h1>span{white-space:nowrap}.hero h1>span:nth-child(1){position:static;margin-left:0;left:auto}.hero h1>span:nth-child(2){margin-left:.22em}
+ .hero-portrait{grid-row:2;position:relative;inset:auto;translate:none;width:88%;max-width:360px;height:auto;aspect-ratio:2/3;margin:0 auto 28px}
+ .hero-portrait img{display:block;width:100%;height:auto;object-fit:contain}
+ .portrait-introduction{grid-row:3}.portrait-credential{grid-row:4}.intro{grid-row:5}
+ .portrait-introduction,.portrait-credential,.intro{position:static;inset:auto;translate:none;transform:none;width:100%;max-width:none;text-align:left}
+ .portrait-introduction{font-size:16px;line-height:1.6;margin:0}.portrait-introduction span{display:block}
+ .portrait-credential{font-size:12px;line-height:1.65;margin:20px 0 0}
+ .intro{margin-top:38px}.intro .cta-introduction{margin-bottom:18px;font-size:10px;line-height:1.7}
+ .intro .oval{width:min(100%,320px);margin-top:0;min-height:72px;padding:20px 24px;font-size:11px}
+ .hero .scroll-cue{margin-top:36px;justify-content:flex-end;gap:16px}
+ section{padding:68px 7%}.offset{margin:32px 0 0;max-width:540px}.opening-illustration{width:min(88%,360px);margin:36px auto}.thread-art{height:140px;margin-top:24px}.thread-art span{font-size:22px;top:20%;left:10%}
+ .about-portrait{width:100%;max-width:380px;margin:auto}.about-grid{gap:36px}.two-column{gap:32px}.large{font-size:clamp(36px,8.6vw,64px)}.about h2{font-size:clamp(36px,8vw,52px)}
+ .confidential-panel .confidential{grid-template-columns:40px 1fr;gap:14px}.confidential-panel .large{font-size:clamp(36px,8.6vw,64px)}.confidential p{line-height:1.7}
+ .contact-link.email{font-size:clamp(16px,4.3vw,23px)}.focus-list summary{font-size:25px}.statement{padding:80px 7% 140px}
+ nav{padding:110px 7% 35px}nav a{font-size:clamp(28px,7vw,48px)}nav small{font-size:10px}dialog{padding:40px 24px}
+}
+
+@media(min-width:801px) and (max-width:999px){.header-note{display:none}.two-column,.about-grid,.contact-grid{grid-template-columns:1fr}.focus-list{margin-left:0}.approach h2{position:static}}
+
+/* Fine horizontal adjustment to the portrait. */
+.horizontal-story .hero-portrait{left:-32px}
+@media(max-width:999px){.hero-portrait{left:-8px}}
+
+/* Shift the right hero group together, preserving its shared edge. */
+.horizontal-story .hero h1,.horizontal-story .intro{left:calc(40% - 24px)}
+
+/* The menu button follows the full height of the brand mark. */
+.menu-toggle{display:inline-flex;align-items:center;justify-content:center;align-self:center;line-height:1;box-sizing:border-box}.menu-toggle span{display:inline-flex;align-items:center;line-height:1}
+
+/* More leftward space for the portrait on desktop screens. */
+.horizontal-story .hero-portrait{left:-64px}
+
+/* Balance mobile typography around the portrait. */
+@media(max-width:999px){
+ .hero h1{text-align:center;margin-bottom:24px;font-size:clamp(31px,9.1vw,72px);line-height:1.14}
+ .hero h1>span:nth-child(1),.hero h1>span:nth-child(2){margin-left:0}
+ .hero-portrait{margin-bottom:24px}
+ .portrait-introduction,.portrait-credential{width:calc(100% - 12px);max-width:32ch;margin-left:auto;margin-right:auto}
+ .portrait-introduction{font-size:clamp(15px,4.1vw,20px);line-height:1.65}
+ .portrait-introduction>span:first-of-type{margin-bottom:12px}
+ .portrait-credential{max-width:42ch;margin-top:18px}
+}
+
+@media(max-width:999px){.portrait-introduction,.portrait-credential{max-width:18rem}}
+
+/* A single mobile column connects introduction, credentials and invitation. */
+@media(max-width:999px){
+ .hero-composition .intro{width:calc(100% - 12px);max-width:18rem;margin:28px auto 0}
+ .intro .cta-introduction{font-size:10px;line-height:1.7;margin:0 0 18px}
+ .intro .oval{display:flex;width:100%;min-height:66px;padding:18px 21px;font-size:10px;letter-spacing:.06em}
+ .hero .scroll-cue{width:calc(100% - 12px);max-width:18rem;margin:30px auto 0;justify-content:center;text-align:center;gap:14px;font-size:10px}
+ .hero .scroll-cue span{font-size:23px;top:0}
+ .portrait-credential{margin-top:16px}
+ .hero{padding-bottom:24px}
+}
+
+/* Preserve the desktop headline stagger on smaller screens. */
+@media(max-width:999px){
+ .hero h1{width:max-content;max-width:100%;justify-self:center;font-size:clamp(33px,10vw,80px);text-align:center}
+ .hero h1>span:nth-child(1){text-align:left;margin-left:-.65em}
+ .hero h1>span:nth-child(2){text-align:center;margin-left:0}
+}
+
+/* Responsive copy width and a truly centered mobile button label. */
+@media(max-width:999px){
+ .portrait-introduction,.portrait-credential,.hero-composition .intro{width:94%;max-width:34rem}
+ .portrait-introduction{font-size:clamp(15px,4vw,20px);line-height:1.6}
+ .intro .oval{justify-content:center;text-align:center;padding:18px 42px;min-height:70px;font-size:10px;letter-spacing:.04em}
+ .intro .oval>span{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:22px;line-height:1}
+ .hero .scroll-cue{max-width:34rem;width:94%}
+}
+
+/* Give the cord more vertical room to travel through the whitespace. */
+.horizontal-story .journey-line{height:clamp(250px,40vh,380px)}
+
+.horizontal-story .thread-art span{top:-8%;left:62%}
+
+.horizontal-story .thread-art span{top:-18%;background:var(--purple);padding:4px 10px}
+
+
+/* Keep the real photo pixels and use the generated extraction only as alpha. */
+.portrait-sketch,.portrait-photo-layer{display:block;position:absolute;inset:0;width:100%;height:100%;transition:opacity .65s ease-out}
+.portrait-sketch{opacity:1}.portrait-photo-layer{opacity:0;pointer-events:none;mask-image:linear-gradient(to bottom,#000 0%,#000 84%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 84%,transparent 100%)}
+.hero-portrait img.portrait-photo,.horizontal-story .hero-portrait img.portrait-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center top;filter:none;opacity:1;pointer-events:none;mask-image:url('assets/melissa-cutout-mask.webp');mask-size:contain;mask-position:center top;mask-repeat:no-repeat;mask-mode:alpha;-webkit-mask-image:url('assets/melissa-cutout-mask.webp');-webkit-mask-size:contain;-webkit-mask-position:center top;-webkit-mask-repeat:no-repeat}
+@media(hover:hover) and (pointer:fine){.hero-portrait:hover .portrait-photo-layer{opacity:1}.hero-portrait:hover .portrait-sketch{opacity:0}}
+.hero-portrait:focus-visible{outline:1px solid var(--lavender);outline-offset:6px}
+.hero-portrait:focus-visible .portrait-photo-layer{opacity:1}.hero-portrait:focus-visible .portrait-sketch{opacity:0}
+
+/* Shade and feather the real portrait contour into the surrounding purple. */
+.portrait-photo-layer{filter:url(#portrait-edge-blend);mask-image:linear-gradient(to bottom,#000 0%,#000 86%,rgba(0,0,0,.7) 94%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 86%,rgba(0,0,0,.7) 94%,transparent 100%)}
+
+/* Subtly lower the photographic exposure to sit naturally on the dark purple. */
+.hero-portrait img.portrait-photo,.horizontal-story .hero-portrait img.portrait-photo{filter:brightness(1.3) saturate(1.02) contrast(1.06)}
+
+/* Deeper exposure with a soft directional shadow over the original photograph. */
+.portrait-photo-layer::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to left,rgba(8,0,18,.68) 0%,rgba(9,0,22,.45) 32%,rgba(12,0,25,.12) 58%,transparent 82%);mask-image:url('assets/melissa-cutout-mask.webp');mask-size:contain;mask-position:center top;mask-repeat:no-repeat;mask-mode:alpha;-webkit-mask-image:url('assets/melissa-cutout-mask.webp');-webkit-mask-size:contain;-webkit-mask-position:center top;-webkit-mask-repeat:no-repeat}
+.portrait-photo-layer{filter:url(#portrait-edge-blend) drop-shadow(6px 9px 10px rgba(10,0,22,.35))}
+
+/* Place a strong directional shadow on the actual right half of the photo. */
+.portrait-photo-layer::after{inset:0 auto auto 50%;width:var(--portrait-photo-width,100%);height:var(--portrait-photo-height,100%);transform:translateX(-50%);background:linear-gradient(to right,transparent 0%,transparent 38%,rgba(6,0,16,.06) 48%,rgba(6,0,16,.55) 62%,rgba(6,0,16,.85) 100%);mask-size:100% 100%;-webkit-mask-size:100% 100%}
+
+
+/* The knot blends with each pixel underneath, including color boundaries. */
+.brand-contrast-cursor{position:fixed;left:0;top:0;display:block;width:32px;height:32px;pointer-events:none;z-index:2147483647;mix-blend-mode:difference;color:#f5de9a;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;opacity:0;visibility:hidden}
+html.brand-cursor-active .brand-contrast-cursor{opacity:1;visibility:visible}
+@media(hover:hover) and (pointer:fine){html.brand-cursor-active,html.brand-cursor-active body,html.brand-cursor-active body *{cursor:none!important}}
+
+@media(hover:hover) and (pointer:fine){html.brand-cursor-active dialog::backdrop{cursor:none!important}}
+
+/* Pair each biographical paragraph with its related expandable information. */
+.about-columns{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
+.about-column{display:flex;flex-direction:column;gap:24px;min-width:0}
+.about-columns .prose{margin-bottom:0}
+.horizontal-story .about-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:4vw;max-width:85vw}
+.horizontal-story .about-copy h2{margin-bottom:clamp(28px,4vh,42px)}
+.horizontal-story .about-columns .prose{column-count:1;max-width:none;margin:0}
+.horizontal-story .about-column{gap:28px}
+.horizontal-story .about-column details{display:block;width:100%;margin:0}
+
+.about-column details[open]{position:relative;background:var(--cream);z-index:1}
+
+/* Keep biography text aligned with its divider throughout the reveal. */
+.horizontal-story .about-columns .prose.motion-reveal{transform:none;transition:opacity 1.5s}
+
+/* The complete desktop contact chapter fits one viewport, including its footer. */
+.horizontal-story .contact{width:100vw;display:flex;flex-direction:column;padding-top:calc(clamp(92px,13vh,120px) + clamp(24px,4vh,48px));padding-bottom:clamp(20px,4vh,44px)}
+.horizontal-story .contact .eyebrow{flex:none;margin-bottom:clamp(16px,3vh,28px)}
+.horizontal-story .contact h2{flex:none;font-size:clamp(46px,min(5.5vw,9vh),100px);line-height:1.06;margin-bottom:clamp(16px,3vh,28px)}
+.horizontal-story .contact-grid{flex:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,7vw,112px);margin-top:clamp(20px,4vh,44px);margin-bottom:clamp(18px,3vh,32px)}
+.horizontal-story .contact-grid>div{min-width:0}
+.horizontal-story .contact .contact-link{font-size:clamp(19px,2vw,27px);line-height:1.4}
+.horizontal-story .contact .contact-link.email{font-size:clamp(16px,1.65vw,25px);margin:4px 0 clamp(14px,2.5vh,24px)}
+.horizontal-story .contact .text-link{margin-top:clamp(14px,2.5vh,24px)}
+.horizontal-story .contact footer{flex:none;margin-top:auto;padding-top:clamp(12px,2vh,20px);gap:24px;align-items:flex-end;font-size:clamp(13px,1vw,15px);line-height:1.35;position:relative;z-index:1}
+.horizontal-story .contact footer>div:first-child{min-width:0;background:var(--purple)}
+.horizontal-story .contact footer>div:last-child{display:flex;align-items:center;gap:clamp(12px,1.8vw,24px);flex-shrink:0}
+.horizontal-story .contact footer button{margin-right:0;white-space:nowrap}
+
+/* Match the brand height and align the menu label with the wordmark. */
+.menu-toggle{align-items:flex-start;font-size:19px;line-height:1.1;padding-top:var(--menu-label-inset,0px)}
+.menu-toggle span{font-size:inherit;line-height:inherit}
+@media(max-width:800px){.menu-toggle{font-size:18px}}
+
+/* Align the quiet portrait link with the introduction underneath. */
+.hero-portrait{overflow:visible}
+.portrait-introduction .portrait-more{position:absolute;left:-4px;top:-54px;text-transform:uppercase;letter-spacing:.12em;z-index:3;padding:2px 4px;color:var(--lavender);background:var(--purple);font:11px/1.5 Arial,Helvetica,sans-serif;white-space:nowrap;transition:color .25s;text-underline-offset:4px}
+.portrait-introduction .portrait-more:hover{color:var(--lavender);text-decoration:underline}
+.hero-portrait:focus-within .portrait-photo-layer{opacity:1}
+.hero-portrait:focus-within .portrait-sketch{opacity:0}
+
+@media(max-width:999px){.portrait-introduction{position:relative}}
+
+/* Keep the entire statement within one desktop viewport, clear of the cord. */
+.horizontal-story .statement{width:100vw;padding:clamp(100px,14vh,150px) 7vw clamp(180px,27vh,290px);justify-content:center}
+.horizontal-story .statement .eyebrow{margin:0 0 clamp(20px,3vh,32px)}
+.horizontal-story .statement .large{font-size:clamp(40px,min(6.5vw,10vh),112px);line-height:1.1;max-width:100%;margin:0}
+
+/* Bring the menu underline closer to its label. */
+.menu-toggle{position:relative;border-bottom-color:transparent}
+.menu-toggle::after{content:'';position:absolute;left:0;right:0;bottom:6px;height:1px;background:var(--lime);pointer-events:none}
+
+/* Spread the burger strokes over the capital height of the menu label. */
+.menu-toggle .menu-bars{display:inline-flex;flex-direction:column;align-items:stretch;justify-content:space-between;width:.8em;height:1cap;margin-top:calc((1.1em - 1cap)/2)}
+.menu-bars i{display:block;flex:none;width:100%;height:1.5px;background:currentColor}
+
+/* Give the contact invitation more space below its introduction. */
+.contact-grid .oval{margin-top:clamp(46px,6vh,56px)}
+
+@media(max-width:999px){.portrait-introduction .portrait-more{font-size:10px;line-height:1.7}}
+
+/* Give the vertical strand a clear, quiet mobile gutter. */
+@media(max-width:999px){
+ main>section:not(.hero){padding-right:max(7%,42px)}
+ .journey-line{width:36px}
+ .journey-line path:first-child,.opening>.journey-line path:first-child{stroke-width:2}
+ .focus-list summary>div{min-width:0;overflow-wrap:anywhere;hyphens:auto}
+ .focus-list summary>span{flex-shrink:0}
+ .focus-list .plain-topic{overflow-wrap:anywhere;hyphens:auto}
+}
+/* The same geometry is used when desktop visitors request reduced motion. */
+body:not(.horizontal-story) .journey-line{width:36px}
+
+/* Ruhigere Hervorhebung: ein Kernsatz pro Absatz statt Fettdruck. */
+strong.key{font-weight:inherit;color:var(--cream);text-decoration:underline 1px var(--lime);text-underline-offset:.32em;text-decoration-skip-ink:auto}
+.light strong.key,.focus strong.key,.confidential-panel strong.key{color:inherit;text-decoration:none;background:linear-gradient(transparent 60%,#D6CFE3bf 60%,#D6CFE3bf 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .08em}
+.confidential-panel strong.key{background:linear-gradient(transparent 60%,var(--cream) 60%,var(--cream) 94%,transparent 94%)}
+
+/* Klarere Hinweistexte: Nummer, feine Linie, Text. */
+.eyebrow{display:flex;align-items:center;gap:16px;font-size:13px;letter-spacing:.16em;line-height:1.3}
+.eyebrow::before{content:'';order:1;flex:none;width:36px;height:1px;background:currentColor;opacity:.55}
+.eyebrow-num{order:0;font:italic 28px/1 Georgia,'Times New Roman',serif;letter-spacing:0;text-transform:none}
+.eyebrow-text{order:2}
+.opening .eyebrow-num,.contact .eyebrow-num,.statement .eyebrow-num{color:var(--lime)}
+.statement .eyebrow{justify-content:center}
+@media(max-width:800px){.eyebrow{font-size:11px;gap:12px}.eyebrow::before{width:26px}.eyebrow-num{font-size:21px}}
+
+/* ===== Feinschliff ===== */
+/* Schaltfläche: größer, kräftigere Kontur, Pfeil bewegt sich beim Hover. */
+.oval{border-width:1.5px}
+.oval span{display:inline-block;transition:translate .55s cubic-bezier(.2,.7,.2,1)}
+.oval:hover span,.oval:focus-visible span{translate:5px -5px}
+.horizontal-story .oval{min-height:76px;padding:20px 36px;gap:24px;font-size:11px;letter-spacing:.1em}
+.horizontal-story .oval span{font-size:26px}
+
+/* Akkordeons: feinere Linien, gezeichnetes Plus/Minus, sanfte Verschiebung. */
+details,.plain-topic{border-top-color:color-mix(in srgb,currentColor 32%,transparent)!important}
+.focus-list details:last-child,.focus-list>:last-child{border-bottom:1px solid color-mix(in srgb,currentColor 32%,transparent)}
+summary{transition:padding-left .45s cubic-bezier(.2,.7,.2,1)}
+@media(hover:hover){summary:hover{padding-left:10px}}
+summary>span:last-child{position:relative;flex:none;width:15px;height:15px;font-size:0!important;transform:none!important}
+summary>span:last-child::before,summary>span:last-child::after{content:'';position:absolute;left:0;top:50%;width:100%;height:1px;margin-top:-.5px;background:currentColor;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+summary>span:last-child::after{transform:rotate(90deg)}
+details[open] summary>span:last-child::after{transform:rotate(0deg)}
+
+/* Kapitelanzeige im Seitenkopf (nur breite Desktop-Ansicht). */
+.chapter-bar{display:none}
+@media(min-width:1200px){.horizontal-story .chapter-bar{display:flex;align-items:center;gap:clamp(20px,2.4vw,40px);margin:0 auto}}
+.chapter-bar a{position:relative;display:flex;align-items:baseline;gap:8px;padding:6px 0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--lavender);opacity:.55;transition:opacity .35s,color .35s}
+.chapter-bar .chapter-num{font:italic 14px/1 Georgia,'Times New Roman',serif;letter-spacing:0;text-transform:none}
+.chapter-bar a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--lime);transform:scaleX(0);transform-origin:left center;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.chapter-bar a.passed{opacity:.8}
+.chapter-bar a:hover{opacity:1}
+.chapter-bar a[aria-current]{opacity:1;color:var(--cream)}
+.chapter-bar a[aria-current] .chapter-num{color:var(--lime)}
+.chapter-bar a[aria-current]::after{transform:scaleX(1)}
+
+/* Sehr dezente Papierkörnung über allen Flächen. */
+body::after{content:'';position:fixed;inset:0;z-index:29;pointer-events:none;opacity:.07;background-image:url('assets/noise.webp');background-size:180px 180px}
+@media(prefers-reduced-motion:reduce){.oval span,summary,summary>span:last-child::before,summary>span:last-child::after,.chapter-bar a::after{transition:none}}
+
+/* Spruch „Jeder Weg beginnt …“ am Desktop etwas tiefer, mehr Luft zum Absatz. */
+.horizontal-story .opening .thread-art span{top:4%}
+
+/* Messhilfe für den Textabstand der Schnur (nur für einen Augenblick aktiv). */
+.measure-layout .reveal,.measure-layout .motion-reveal,.measure-layout .motion-letter,.measure-layout .motion-word,.measure-layout .story-line{transform:none!important;translate:none!important}
+.measure-layout :is(.reveal,.motion-reveal,.motion-letter,.motion-word,.story-line),.measure-settle :is(.reveal,.motion-reveal,.motion-letter,.motion-word,.story-line){transition:none!important}
+
+/* Mobil: eine freie Spur am rechten Rand für die Schnur, damit sie Texten nicht zu nahe kommt. */
+body:not(.horizontal-story) main>section:not(.hero){padding-right:max(7%,48px)}
+@media(max-width:420px){.fact h3{font-size:clamp(38px,12.5vw,50px)}}
+
+/* Mobil: „Ein Stück weiter“ entfällt. */
+body:not(.horizontal-story) .hero .scroll-cue{display:none}
+/* Mobil: Pfeil direkt neben der Beschriftung, mittig im Oval statt am Rand. */
+body:not(.horizontal-story) .oval{justify-content:center;gap:12px}
+body:not(.horizontal-story) .oval>span{position:relative!important;right:auto!important;top:-1px!important;transform:none!important;font-size:20px;line-height:1}
+
+/* Mobil: stimmiger Rhythmus im Einleitungsblock – eng innerhalb einer Gruppe, klar zwischen den Gruppen. */
+body:not(.horizontal-story) .hero .portrait-introduction{line-height:1.45}
+body:not(.horizontal-story) .hero .portrait-introduction>span:first-of-type{margin-bottom:10px}
+body:not(.horizontal-story) .hero .portrait-credential{margin-top:20px;line-height:1.5}
+body:not(.horizontal-story) .hero .hero-composition .intro{margin-top:44px}
+body:not(.horizontal-story) .hero .intro .cta-introduction{line-height:1.6;margin:0 0 40px}
+
+/* Mobil: Spruch „Jeder Weg beginnt …“ etwas tiefer, mehr Luft zum Absatz darüber. */
+body:not(.horizontal-story) .opening .thread-art span{top:44%}
+
+/* Knoten zum Anfassen: Greif-Zeiger statt Knäuel-Zeiger. */
+html.cord-grab,html.cord-grab body,html.cord-grab body *{cursor:grab!important}
+html.cord-dragging,html.cord-dragging body,html.cord-dragging body *{cursor:grabbing!important;user-select:none!important;-webkit-user-select:none!important}
+html.cord-grab .brand-contrast-cursor,html.cord-dragging .brand-contrast-cursor{opacity:0!important}
+
+/* Die gezeichnete Melissa atmet: kaum wahrnehmbar, ohne Winken. */
+.hero-portrait>.portrait-sketch,.hero-portrait>.portrait-photo-layer{transform-origin:50% 88%;animation:portraitBreathe 4.6s ease-in-out infinite}
+@keyframes portraitBreathe{0%,100%{scale:1;translate:0 0}45%{scale:1.016;translate:0 -3px}}
+
+@media(prefers-reduced-motion:reduce){.hero-portrait>.portrait-sketch,.hero-portrait>.portrait-photo-layer{animation:none}}
+
+/* Die gezeichnete Melissa blinzelt ab und zu. */
+.sketch-blink{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;overflow:visible;opacity:0;animation:sketchBlink 5.8s linear infinite 1.8s}
+.sketch-blink ellipse{fill:var(--purple)}
+.sketch-blink path{fill:none;stroke:var(--lime);stroke-width:7.5;stroke-linecap:round}
+@keyframes sketchBlink{0%,91%{opacity:0}91.8%,93.2%{opacity:1}94%,95.4%{opacity:0}96.2%,97.2%{opacity:1}98%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.sketch-blink{display:none}}
+
+/* ===== Feinabstimmung ===== */
+/* Fotos an die Palette angleichen: etwas entsättigt, Schatten sanft in den Iris-Grauton gehoben (SVG-Filter photo-palette-grade). Die Datei bleibt unverändert. */
+.about-portrait img,.hero-portrait img.portrait-photo,.horizontal-story .hero-portrait img.portrait-photo{filter:url(#photo-palette-grade) contrast(1.04)!important}
+
+/* Ein einheitlicher Stil für alle kleinen Großbuchstaben-Texte. */
+:is(.hero-top>span,.eyebrow-text,.intro .cta-introduction,.portrait-introduction .portrait-more,.about-portrait figcaption,.chapter-bar .chapter-label,.hero .scroll-cue,.fact>span,.brand-subtitle){font-family:Arial,Helvetica,sans-serif!important;font-size:11px!important;font-weight:400!important;line-height:1.55!important;letter-spacing:.14em!important;text-transform:uppercase!important}
+.brand-subtitle{letter-spacing:0!important}
+:is(.hero,.statement,.contact) :is(.hero-top>span,.eyebrow-text,.intro .cta-introduction,.portrait-more,.scroll-cue){color:var(--lavender)!important}
+:is(.light,.focus,.confidential-panel) :is(.eyebrow-text,figcaption,.fact>span){color:color-mix(in srgb,var(--purple) 72%,transparent)!important}
+
+/* Eine gemeinsame Geste für Links: eine feine Linie liegt bereit, beim Überfahren zeichnet sich die volle Linie von links nach rechts. */
+:is(.text-link,.contact-link,.portrait-introduction .portrait-more,footer button){text-decoration:none!important;border-bottom:0!important;padding-bottom:3px;background-image:linear-gradient(currentColor,currentColor),linear-gradient(color-mix(in srgb,currentColor 30%,transparent),color-mix(in srgb,currentColor 30%,transparent))!important;background-size:0% 1px,100% 1px!important;background-position:0 100%,0 100%!important;background-repeat:no-repeat!important;transition:background-size .6s cubic-bezier(.2,.7,.2,1),color .3s}
+:is(.text-link,.contact-link,.portrait-introduction .portrait-more,footer button):is(:hover,:focus-visible){background-size:100% 1px,100% 1px!important;text-decoration:none!important}
+@media(prefers-reduced-motion:reduce){:is(.text-link,.contact-link,.portrait-more,footer button){transition:none}}
+
+/* Kopfbereich in den Farben der Startseite: Fast-Schwarz, Schrift in hellem Iris, Akzente in Iris. */
+header,.horizontal-story header{background:var(--purple);color:var(--lavender);border-bottom-color:transparent}
+body:not(.horizontal-story) header{margin:0;padding:0 6%}
+@media(min-width:801px){body:not(.horizontal-story) header{padding:0 4.5%}}
+header .brand{color:var(--lavender)}
+header .brand-subtitle{color:var(--lavender)!important}
+header .menu-toggle{color:var(--lime)}
+header .menu-toggle::after{background:var(--lime)}
+.chapter-bar a{color:var(--lavender)}
+.chapter-bar a[aria-current]{color:var(--cream)}
+.chapter-bar a[aria-current] .chapter-num{color:var(--lime)}
+.chapter-bar a::after{background:var(--lime)}
+.progress{background:var(--lime)}
+
+/* Kapitel 01 „Psychotherapie“ in den Farben der Schwerpunkte: helles Iris, Schrift in Fast-Schwarz. */
+main>.opening{background:var(--lavender);color:var(--purple)}
+.opening h2,.opening h2 em,.opening .eyebrow-num{color:var(--purple)}
+.opening .eyebrow-text{color:color-mix(in srgb,var(--purple) 72%,transparent)!important}
+.opening .offset{color:var(--purple)}
+.opening strong.key{color:inherit;text-decoration:none;background:linear-gradient(transparent 60%,var(--cream) 60%,var(--cream) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .08em}
+.opening-illustration img{filter:url(#hero-ink)!important}
+.opening>.journey-line{stroke:var(--purple)}
+.opening>.journey-line path.cord-ribbon{fill:var(--purple)}
+.opening .thread-art svg{stroke:var(--purple)}
+.opening .thread-art span{color:var(--purple)}
+.horizontal-story .opening .thread-art span{background:var(--lavender)}
+
+/* Startseite: Porträtblock und Überschriftblock getauscht. */
+/* Desktop: Überschrift und Schaltfläche links, Zeichnung mit Vorstellung rechts. */
+.horizontal-story .hero .hero-composition>h1,.horizontal-story .hero .hero-composition>.intro{left:0;right:auto;width:60%}
+.horizontal-story .hero .hero-composition>h1>span:nth-child(1){margin-left:0}
+.horizontal-story .hero .hero-composition>h1>span:nth-child(2){margin-left:.65em}
+.horizontal-story .hero .hero-composition>.hero-portrait{left:auto;right:-64px}
+.horizontal-story .hero .hero-composition>:is(.portrait-introduction,.portrait-credential){left:min(var(--sketch-left,100%),calc(100% - 330px));right:0;width:auto;text-align:left}
+.horizontal-story .hero .scroll-cue{left:0;right:auto;justify-content:flex-start;text-align:left}
+/* Handy: erst Zeichnung mit Vorstellung, dann Überschrift und Schaltfläche. */
+body:not(.horizontal-story) .hero .hero-composition>.hero-portrait{grid-row:1}
+body:not(.horizontal-story) .hero .hero-composition>.portrait-introduction{grid-row:2}
+body:not(.horizontal-story) .hero .hero-composition>.portrait-credential{grid-row:3}
+body:not(.horizontal-story) .hero .hero-composition>h1{grid-row:4;margin-top:56px}
+body:not(.horizontal-story) .hero .hero-composition>.intro{grid-row:5;margin-top:28px}
+
+/* Startseite Feinschliff */
+/* „Mehr zu mir“ steht frei über der Vorstellung statt auf der Zeichnung. */
+.hero .portrait-introduction .portrait-more{position:relative!important;left:auto!important;top:auto!important;display:inline-block;margin:0 0 16px -4px}
+/* Desktop: Zeichnung größer und etwas weiter zur Mitte; Höhe und Linien richtet refine.js aus. */
+
+.horizontal-story .hero h1{font-size:min(7.3vw,100px)}
+
+.horizontal-story .hero .hero-composition>.intro{top:var(--intro-top)!important}
+
+/* Startseite – neue Komposition (Desktop): Werte setzt alignHero in refine.js. */
+.horizontal-story .hero .hero-composition>.hero-portrait{top:-38px;left:auto;right:0;width:var(--portrait-w,36%);height:var(--portrait-h,calc(100% - 195px));z-index:1}
+.horizontal-story .hero .hero-composition>h1{z-index:2}
+.horizontal-story .hero .hero-composition>.portrait-introduction{left:var(--txt-left,auto)!important;right:auto!important;width:var(--txt-w,auto)!important;top:var(--txt-top,auto)!important;bottom:auto!important;translate:none!important;transform:none!important}
+.horizontal-story .hero .hero-composition>.portrait-credential{left:var(--txt-left,auto)!important;right:auto!important;width:var(--txt-w,auto)!important;top:var(--cred-top,auto)!important;bottom:auto!important;translate:none!important;transform:none!important;margin:0!important}
+/* „Humanistische Therapie …“ als kleine Zeile über „Mehr zu mir“. */
+.hero .portrait-kicker{display:block;margin:0 0 14px;font:400 11px/1.55 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--lavender)}
+/* „Raum für Sie …“ als ruhige Unterzeile in Georgia kursiv. */
+.hero .intro .cta-introduction{font:italic 24px/1.3 Georgia,'Times New Roman',serif!important;letter-spacing:-.01em!important;text-transform:none!important;color:var(--lavender)!important}
+@media(max-width:999px){.hero .intro .cta-introduction{font-size:21px!important}}
+
+/* „Ein Stück weiter“ bündig mit der Komposition, auch auf sehr breiten Bildschirmen. */
+.horizontal-story .hero .scroll-cue{width:100%;max-width:1350px;margin-left:auto;margin-right:auto}
+.horizontal-story .hero .hero-composition>h1{font-size:min(7.3vw,100px)}
+
+/* Highlight-Farbe für Details: warmes, gedämpftes Gelb #E0DC70. */
+:root{--highlight:#E0DC70}
+/* Kapitelnummern auf dunklem Grund und in der Kapitelleiste */
+:is(.statement,.contact) .eyebrow-num,.chapter-bar a[aria-current] .chapter-num{color:var(--highlight)}
+/* Fortschrittslinie oben */
+.progress{background:var(--highlight)}
+/* Hervorgehobene Kernsätze: Unterstreichung auf Dunkel, Textmarker auf Hell */
+strong.key{text-decoration-color:var(--highlight)}
+:is(.light,.focus,.confidential-panel,.opening) strong.key{background:linear-gradient(transparent 60%,color-mix(in srgb,var(--highlight) 70%,transparent) 60%,color-mix(in srgb,var(--highlight) 70%,transparent) 94%,transparent 94%)}
+/* Links: die volle Linie beim Überfahren zeichnet sich in der Highlight-Farbe */
+:is(.text-link,.contact-link,.portrait-introduction .portrait-more,footer button){background-image:linear-gradient(var(--highlight),var(--highlight)),linear-gradient(color-mix(in srgb,currentColor 30%,transparent),color-mix(in srgb,currentColor 30%,transparent))!important}
+/* Fokus-Rahmen und Textauswahl */
+button:focus-visible,a:focus-visible,summary:focus-visible{outline-color:var(--highlight)}
+::selection{background:var(--highlight);color:var(--purple)}
+
+/* Startseite: Überschrift mit mehr Luft – weniger enge Laufweite, etwas mehr Zeilenabstand. */
+.hero .hero-composition>h1{letter-spacing:-.018em!important;word-spacing:.04em}
+.horizontal-story .hero .hero-composition>h1{font-size:min(6.6vw,94px);line-height:1.12}
+body:not(.horizontal-story) .hero .hero-composition>h1{line-height:1.16}
+.hero .intro .cta-introduction{letter-spacing:0!important;line-height:1.4!important}
+/* Handy: Überschrift bündig mit den übrigen Textblöcken, zweite Zeile leicht eingerückt. */
+body:not(.horizontal-story) .hero .hero-composition>h1{justify-self:stretch;width:94%;max-width:34rem;margin-left:auto;margin-right:auto;text-align:left}
+body:not(.horizontal-story) .hero .hero-composition>h1>span:nth-child(1){margin-left:0;left:auto;text-align:left}
+body:not(.horizontal-story) .hero .hero-composition>h1>span:nth-child(2){margin-left:.6em;text-align:left}
+
+/* Startseite: Melissa in der Mitte, Vorstellung rechts (Desktop); Werte aus alignHero. */
+.horizontal-story .hero .hero-composition>.hero-portrait{top:var(--portrait-top,0)!important;left:var(--portrait-left,auto)!important;right:auto!important}
+.horizontal-story .hero .hero-composition>h1{top:var(--h1-top,30px)!important}
+/* Neue Hauptüberschrift „Raum für Sie. Und alles, was gerade da ist.“ – drei Zeilen am Desktop. */
+.horizontal-story .hero .hero-composition>h1{width:auto;max-width:none}
+.hero .hero-composition>h1>span:nth-child(3){display:block;margin-left:.65em}
+body:not(.horizontal-story) .hero .hero-composition>h1>span:nth-child(3){margin-left:.6em}
+
+/* Startseite Desktop: Vorstellung links, Schaltfläche und „Ein Stück weiter“ rechts (17.11.2026) */
+.horizontal-story .hero .hero-composition>.intro{left:var(--btn-left,auto)!important;right:auto!important;width:auto!important}
+.horizontal-story .hero .scroll-cue{padding-left:var(--cue-left,0)}
+@media(max-height:760px){.horizontal-story .hero .hero-composition>h1{font-size:min(6.6vw,94px,10vh)!important}}
+
+/* Highlightfarbe für Mauszeiger und Details (17.11.2026) */
+.brand-contrast-cursor{mix-blend-mode:normal!important;color:var(--highlight)!important;filter:drop-shadow(0 0 1px rgba(31,29,36,.7)) drop-shadow(0 1px 2px rgba(31,29,36,.35))}
+:is(.hero,.statement,.contact) .oval span,.hero .scroll-cue span{color:var(--highlight)}
+.menu-toggle:is(:hover,:focus-visible) .menu-bars i{background:var(--highlight)}
+:is(.hero,.statement,.contact) .oval:is(:hover,:focus-visible){border-color:var(--highlight)}
+.horizontal-story .hero .oval{white-space:nowrap}
+.horizontal-story .hero .hero-composition>h1{margin-left:calc(-1*min(56px,3.6vw))!important}
+
+/* Startseite: Melissa läuft herein und setzt sich (Video, einmalig). Danach steht das gleiche Schlussbild als Bild da. */
+.hero-portrait .sketch-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center top;filter:url(#video-brand-ink);pointer-events:none;opacity:0;transition:opacity .8s ease}
+.hero-portrait .portrait-sketch>img{transition:opacity .5s ease}
+.hero-portrait.video-playing .sketch-video{opacity:1}
+.hero-portrait.video-playing .portrait-sketch>img{opacity:0!important}
+.hero-portrait:is(:hover,:focus-visible,:focus-within) .sketch-video{opacity:0}
+/* Die Lider passten zur alten Zeichnung – bei der neuen Zeichnung ausgeblendet. */
+.sketch-blink{display:none!important}
+@media(prefers-reduced-motion:reduce){.hero-portrait .sketch-video{display:none}}
+/* Echtes Foto (beim Überfahren) auf Größe und Lage der gezeichneten Melissa gebracht: Kopf auf Kopf, Maßstab wie die Zeichnung. */
+.hero-portrait img.portrait-photo,.horizontal-story .hero-portrait img.portrait-photo{transform-origin:0 0!important;transform:translate(36.8%,22.3%) scale(.5)!important}
+/* Vorstellung, Qualifikation und Schaltfläche erst nach dem Video einblenden (Platz bleibt reserviert). */
+.hero-composition.await-video>:is(.portrait-introduction,.portrait-credential,.intro){opacity:0!important;visibility:hidden!important}
+.hero-composition.video-revealed>:is(.portrait-introduction,.portrait-credential,.intro){animation:heroAfterVideo .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-composition.video-revealed>.portrait-credential{animation-delay:.15s}
+.hero-composition.video-revealed>.intro{animation-delay:.3s}
+@keyframes heroAfterVideo{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){.hero-composition.await-video>*{opacity:1!important;visibility:visible!important}}
+.hero-portrait.video-pending .portrait-sketch>img{opacity:0!important}
+/* Handy: gezeichnete Melissa größer – volle Spaltenbreite (vorher ca. 88 %). */
+body:not(.horizontal-story) .hero .hero-composition>.hero-portrait{width:100%!important;max-width:440px!important;margin-left:auto;margin-right:auto}
+/* Schattenschicht des Fotos genauso verkleinern wie das Foto selbst (sonst ragt der alte, große Umriss heraus). */
+.hero-portrait .portrait-photo-layer::after{inset:0!important;width:100%!important;height:100%!important;transform-origin:0 0!important;transform:translate(36.8%,22.3%) scale(.5)!important;mask-size:contain!important;-webkit-mask-size:contain!important;mask-position:center top!important;-webkit-mask-position:center top!important}
+/* Leistung (20.11.2026): vorgerechnete Zeichnung statt Live-Filter, kein Weichzeichner im Seitenkopf,
+   verstecktes Foto wird nicht gerendert und „atmet“ nur, wenn es sichtbar ist. */
+.hero-portrait .portrait-sketch>img{filter:none!important}
+.horizontal-story header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:#1F1D24f5!important}
+.hero-portrait>.portrait-photo-layer{visibility:hidden;animation:none!important;transition:opacity .65s ease-out,visibility 0s linear .65s}
+.hero-portrait:is(:hover,:focus-visible,:focus-within)>.portrait-photo-layer{visibility:visible;transition:opacity .65s ease-out,visibility 0s}
+/* Größe ändern: aufwendige Schnur und Dauer-Animationen ruhen, bis das Ziehen vorbei ist. */
+html.is-resizing .journey-line{visibility:hidden!important}
+html.is-resizing *,html.is-resizing *::before,html.is-resizing *::after{animation-play-state:paused!important;transition:none!important}
+/* Video ist vorab eingefärbt (Hintergrund = Seitenfarbe) – kein Live-Filter pro Bild mehr. */
+.hero-portrait .sketch-video{filter:none!important}
+/* Transparentes WebM: kein Hintergrund, also kein sichtbarer Kasten (MP4 bleibt Ersatz für Safari). */
+.hero-portrait .sketch-video{background:transparent}
+/* Menü-Schaltfläche: nur die drei Balken (Beschriftung bleibt für Screenreader als aria-label). */
+header .menu-toggle{padding:0!important;min-width:44px;min-height:44px;height:auto!important;align-items:center!important;justify-content:center}
+header .menu-toggle::after{display:none!important}
+header .menu-toggle .menu-bars{margin:0!important;width:30px!important;height:28px!important}
+header .menu-toggle .menu-bars i{height:2px}
+header .menu-toggle .menu-close{font-size:30px;line-height:1;margin:0!important}
+/* Schnur im ersten Kapitel über der (deckenden) Zeichnung „Innere Unruhe“, damit sie sichtbar aus dem Knäuel kommt. */
+#therapie>.journey-line{z-index:3!important}
+/* Handy: Hauptüberschrift als Erstes, vor der Zeichnung. */
+body:not(.horizontal-story) .hero .hero-composition>h1{grid-row:1!important;margin-top:8px!important;margin-bottom:0;position:relative;z-index:2}
+/* Oben in der Zeichnung ist Leerraum – Melissa darum etwas unter die Überschrift ziehen. */
+body:not(.horizontal-story) .hero .hero-composition>.hero-portrait{margin-top:-72px!important;margin-bottom:-28px!important}
+body:not(.horizontal-story) .hero .hero-composition>.portrait-introduction{position:relative;z-index:2}
+body:not(.horizontal-story) .hero .hero-composition>.hero-portrait{grid-row:2!important}
+body:not(.horizontal-story) .hero .hero-composition>.portrait-introduction{grid-row:3!important}
+body:not(.horizontal-story) .hero .hero-composition>.portrait-credential{grid-row:4!important}
+/* Handy: mehr Luft über und unter „Einander kennenlernen“. */
+body:not(.horizontal-story) .hero .hero-composition>.intro{margin-top:52px!important;margin-bottom:56px!important}
+/* Zitat „Jeder Weg beginnt …“ vor der Schnur, mit Fläche in Seitenfarbe dahinter. */
+#therapie .thread-art{z-index:4}
+#therapie .thread-art span{z-index:4;background:var(--section-bg,#D6CFE3);padding:.15em .35em;margin:-.15em -.35em;border-radius:6px}
+/* Gelbe Akzente auf der Startseite (21.11.2026): Oberzeile und Schaltfläche „Einander kennenlernen“. */
+.hero .portrait-kicker{color:var(--highlight)!important}
+.hero .oval{color:var(--highlight)!important;border-color:var(--highlight)!important}
+.hero .oval:is(:hover,:focus-visible){background:color-mix(in srgb,var(--highlight) 12%,transparent)}
+/* Pfeil bei „Ein Stück weiter“ weiß (21.11.2026). */
+.hero .scroll-cue span{color:#fff!important}
+/* Zeichnung „schützende Arme“ (hell) unter „Keine fertigen Lösungen. Sondern gemeinsam neugierig sein.“ (21.11.2026) */
+.statement .statement-hands{display:block;width:min(56%,260px);height:auto;margin:36px auto 0;position:relative;z-index:4}
+.horizontal-story .statement .statement-hands{width:min(14vw,25vh);margin-top:clamp(12px,2.2vh,26px)}
+/* Burger-Menü in der Farbe des Logos (21.11.2026); beim Überfahren weiter gelb. */
+header .menu-toggle{color:var(--lavender)!important}
+header .menu-toggle .menu-bars i{background:var(--lavender)}
+header .menu-toggle:is(:hover,:focus-visible) .menu-bars i{background:var(--highlight)}
+/* Schwerpunkte: umbrochene Zeilen bündig unter dem ersten Wort (hängender Einzug hinter der Nummer). */
+.topic-head{display:flex;align-items:baseline}
+.topic-head>.number{flex:none}
+.topic-head>.topic-title{flex:1;min-width:0}
+/* Foto beim Überfahren: Melissa im Sessel mit Pflanze, im selben Bildausschnitt wie die Zeichnung (21.11.2026).
+   Keine Maske, keine Verschiebung, kein Abdunkeln mehr – Foto und Zeichnung liegen 1:1 übereinander. */
+.hero-portrait img.portrait-photo,.horizontal-story .hero-portrait img.portrait-photo{transform:none!important;mask-image:none!important;-webkit-mask-image:none!important}
+.hero-portrait .portrait-photo-layer::after{display:none!important}
+.hero-portrait .portrait-photo-layer{filter:none!important;mask-image:none!important;-webkit-mask-image:none!important}
+@media(max-width:999px){.hero>.portrait-kicker.kicker-top{position:static;margin:0 0 18px;max-width:none;white-space:normal}}
+/* === Hochwertig: Schriften (Inter + Instrument Sans), Raster 8/16/32/64/128, Feinheiten === */
+@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:100 900;src:url('assets/fonts/inter-latin-wght-normal.woff2') format('woff2-variations');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:100 900;src:url('assets/fonts/inter-latin-ext-wght-normal.woff2') format('woff2-variations');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-display:swap;font-weight:400 700;font-stretch:75% 100%;src:url('assets/fonts/instrument-sans-latin-standard-normal.woff2') format('woff2-variations');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Instrument Sans';font-style:normal;font-display:swap;font-weight:400 700;font-stretch:75% 100%;src:url('assets/fonts/instrument-sans-latin-ext-standard-normal.woff2') format('woff2-variations');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--sans:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;--serif:'Instrument Sans','Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;--s1:8px;--s2:16px;--s3:32px;--s4:64px;--s5:128px}
+body,body *{font-family:var(--sans)!important}
+h1,h1 *,h2,h2 *,h3,nav a,.thread-art span,.thread-art span *,.focus-list summary,.topic-title,.contact-link,.eyebrow-num,.chapter-bar .chapter-num,.hero .intro .cta-introduction,.small-symbol{font-family:var(--serif)!important;font-style:normal!important;font-weight:400!important}
+.focus-list .number,.focus-list summary>span:last-child,.contact-link.email{font-family:var(--sans)!important}
+em{font-style:normal}
+h1,h2,.large{letter-spacing:-.035em!important}
+.hero h1{letter-spacing:-.045em!important}
+body{font-feature-settings:'kern','liga','calt';-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+.prose p,details p,details li,.confidential p,.fact p,.contact p{hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:7 3 3}
+h1,h2,h3{hyphens:manual}
+/* Raster: Kapitelabstände und Innenabstände nur aus 8/16/32/64/128 */
+.eyebrow{margin-bottom:var(--s3)!important}
+.prose p+p,.horizontal-story .conditions .prose p+p{margin-top:var(--s2)!important}
+.credential{margin-top:var(--s2)!important}
+details{padding:var(--s2) 0!important}
+.fact{padding:0 0 var(--s3)!important;margin-bottom:var(--s3)!important}
+.fact h3{margin:var(--s1) 0 var(--s2)!important}
+.confidential h3{margin-bottom:var(--s2)!important}
+@media(max-width:999px){
+ body:not(.horizontal-story) main>section:not(.hero){padding-top:var(--s5)!important;padding-bottom:var(--s5)}
+ body:not(.horizontal-story) main>section.contact{padding-bottom:var(--s3)}
+ body:not(.horizontal-story) section:not(.hero) h2{margin-bottom:var(--s4)!important}
+ body:not(.horizontal-story) .about h2,body:not(.horizontal-story) .conditions h2{margin-bottom:var(--s3)!important}
+ body:not(.horizontal-story) .offset{margin-top:var(--s4)!important}
+ body:not(.horizontal-story) .about .prose{margin-bottom:var(--s3)!important}
+ body:not(.horizontal-story) .about-grid,body:not(.horizontal-story) .two-column,body:not(.horizontal-story) .contact-grid{gap:var(--s4)!important}
+ body:not(.horizontal-story) .contact-grid{margin-bottom:var(--s5)!important}
+ body:not(.horizontal-story) .confidential{margin-top:var(--s4)!important}
+}
+.horizontal-story main>section:not(.hero){padding:var(--s5) var(--s5) var(--s4)!important}
+.horizontal-story section:not(.hero) h2{margin-bottom:var(--s3)!important}
+.horizontal-story .contact-grid{margin-bottom:var(--s3)!important;gap:var(--s4)!important}
+.horizontal-story footer{padding-top:var(--s2)!important}
+.contact-note{position:fixed;z-index:120;left:50%;bottom:var(--s3);transform:translate(-50%,var(--s2));opacity:0;visibility:hidden;width:min(480px,calc(100vw - 2*var(--s2)));display:grid;grid-template-columns:auto 1fr auto;gap:var(--s2);align-items:start;padding:var(--s3);background:var(--cream);color:var(--purple);border-radius:2px;box-shadow:0 24px 64px rgba(8,6,14,.35);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1),visibility 0s linear .6s}
+.contact-note.show{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1),visibility 0s}
+.contact-note strong{display:block;font:400 22px/1.2 var(--serif)!important;margin-bottom:var(--s1)}
+.contact-note p{margin:0;font-size:15px;line-height:1.55}
+.contact-note-mark{width:32px;height:32px;margin-top:2px;background:url('assets/cursor-knaeuel-dark.svg') center/contain no-repeat}
+.contact-note button{background:none;border:0;padding:0 0 0 var(--s1);font-size:24px;line-height:1;color:var(--purple);cursor:pointer}
+.contact-note button:focus-visible{outline:2px solid var(--purple);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.contact-note,.contact-note.show{transition:none;transform:translate(-50%,0)}}
+@media(max-width:480px){.contact-note{padding:var(--s3) var(--s2) var(--s3) var(--s3);grid-template-columns:1fr auto;bottom:var(--s2)}.contact-note-mark{display:none}}
+/* Hover: feine Unterstreichung läuft von links ein, statt Farbwechsel */
+.u{font-weight:inherit;padding-bottom:2px;background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;transition:background-size .6s cubic-bezier(.2,.7,.2,1)}
+a:is(:hover,:focus-visible) .u{background-size:100% 1px}
+:is(.text-link,.contact-link,.portrait-introduction .portrait-more,footer button){background-position:left bottom,left bottom!important;background-repeat:no-repeat!important;transition:background-size .6s cubic-bezier(.2,.7,.2,1)!important}
+.oval::before{display:none!important}
+.oval:is(:hover,:focus-visible){background:transparent!important;transform:none!important;color:var(--lime)}
+.contact .contact-grid .oval:is(:hover,:focus-visible){border-color:var(--lime)}
+nav a:hover{color:var(--lavender)}
+.chapter-bar a:is(:hover,:focus-visible){opacity:.55}
+.chapter-bar a.passed:is(:hover,:focus-visible){opacity:.8}
+.chapter-bar a[aria-current]:is(:hover,:focus-visible){opacity:1}
+.chapter-bar a:is(:hover,:focus-visible)::after{transform:scaleX(1)}
+@media(prefers-reduced-motion:reduce){.u,:is(.text-link,.contact-link,.portrait-more,footer button){transition:none!important}}
+/* === Schriftgrößen: 6 feste Stufen (Desktop 12/16/20/32/56/88, mobil 12/16/20/24/32/44). Hero-Überschrift wird weiter per Skript eingepasst. === */
+:root{--t1:12px;--t2:16px;--t3:20px;--t4:32px;--t5:56px;--t6:88px}
+@media(max-width:999px){:root{--t4:24px;--t5:32px;--t6:44px}}
+/* t1 – kleine Zeilen, Labels */
+.eyebrow,.eyebrow-text,.hero-top>span,.hero .portrait-kicker,.portrait-introduction .portrait-more,.credential,.horizontal-story .credential,.oval,.horizontal-story .oval,.intro .oval,body:not(.horizontal-story) .intro .oval,.scroll-cue,.hero .scroll-cue,.chapter-bar a,.chapter-bar .chapter-label,.chapter-bar .chapter-num,.about-portrait figcaption,.fact>span,footer small,footer button,.horizontal-story .contact footer button,.focus-list .number,details small,nav small,.header-note{font-size:var(--t1)!important}
+/* t2 – Fließtext */
+body,.prose,.prose p,.conditions .prose,.horizontal-story .about .prose,.horizontal-story .focus-list details p,details p,details li,.fact p,.confidential p,.contact p,footer,.portrait-introduction,.portrait-introduction>span,.text-link,dialog p,.contact-note p,.intro{font-size:var(--t2)!important}
+/* t3 – Einleitungen, Aufklapptitel, E-Mail */
+.offset,.horizontal-story .opening .offset,.offset p,summary,.about summary,.facts summary,.contact-link.email,.horizontal-story .contact .contact-link.email,.contact-note strong{font-size:var(--t3)!important}
+/* t4 – Zwischenüberschriften */
+.focus-list summary,.topic-title,.plain-topic .topic-title,h3,.confidential h3,.eyebrow-num,.thread-art span,.close-dialog,dialog h2,.contact-link,.horizontal-story .contact .contact-link,.horizontal-story .contact-link{font-size:var(--t4)!important}
+.contact-link.email,.horizontal-story .contact .contact-link.email{font-size:var(--t3)!important}
+/* t5 – Kapitelüberschriften */
+h2,.horizontal-story .about h2,.horizontal-story .conditions h2,.about h2,.fact h3,.small-symbol,nav a{font-size:var(--t5)!important}
+/* t6 – große Leitsätze */
+h2.large,.horizontal-story h2.large,.horizontal-story .contact h2,.contact h2.large{font-size:var(--t6)!important}
+html :is(.hero-top>span,.eyebrow-text,.portrait-introduction .portrait-more,.about-portrait figcaption,.chapter-bar .chapter-label,.hero .scroll-cue,.fact>span){font-size:var(--t1)!important}
+@media(max-width:359px){:root{--t6:40px}}
+/* === Bewegung aus einem Guss: eine Kurve, eine Dauer für Einblendungen; Texte nur still (Deckkraft, ohne Bewegung) === */
+:root{--ease:cubic-bezier(.22,.61,.36,1);--dur-in:.9s;--dur-ui:.5s}
+@keyframes heroAfterVideo{from{opacity:0}to{opacity:1}}
+@keyframes menuItemIn{from{opacity:0}to{opacity:1}}
+.hero-composition.video-revealed>:is(.portrait-introduction,.portrait-credential,.intro){animation-duration:var(--dur-in)!important;animation-timing-function:var(--ease)!important}
+nav:not([hidden]){animation-duration:var(--dur-in)!important;animation-timing-function:var(--ease)!important}
+nav:not([hidden]) a{animation-duration:var(--dur-in)!important;animation-timing-function:var(--ease)!important}
+nav.is-closing{animation-timing-function:var(--ease)!important}
+.hero-portrait .sketch-video{transition:opacity var(--dur-in) var(--ease)!important}
+.hero-portrait>.portrait-sketch,.hero-portrait>.portrait-photo-layer{transition:opacity var(--dur-in) var(--ease)}
+.hero-portrait>.portrait-photo-layer{transition:opacity var(--dur-in) var(--ease),visibility 0s linear var(--dur-in)!important}
+.hero-portrait:is(:hover,:focus-visible,:focus-within)>.portrait-photo-layer{transition:opacity var(--dur-in) var(--ease),visibility 0s!important}
+.contact-note,.contact-note.show{transition-duration:var(--dur-in)!important;transition-timing-function:var(--ease)!important}
+/* Kleine Rückmeldungen beim Überfahren: gleiche Kurve, kürzere Dauer */
+.u,:is(.text-link,.contact-link,.portrait-introduction .portrait-more,footer button){transition:background-size var(--dur-ui) var(--ease)!important}
+.oval span{transition:translate var(--dur-ui) var(--ease)!important}
+.chapter-bar a{transition:opacity var(--dur-ui) var(--ease),color var(--dur-ui) var(--ease)!important}
+.chapter-bar a::after{transition:transform var(--dur-ui) var(--ease)!important}
+summary,summary>span:last-child{transition-duration:var(--dur-ui)!important;transition-timing-function:var(--ease)!important}
+/* Weniger gleichzeitig: Logo dreht sich nicht mehr, Video und Schnur bleiben die Hauptdarsteller */
+.brand svg{animation:none!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.motion-ready .motion-reveal,.js-motion .reveal,.horizontal-story .about-columns .prose.motion-reveal{transition:opacity var(--dur-in) var(--ease)!important}
+@media(prefers-reduced-motion:reduce){.motion-ready .motion-reveal,.js-motion .reveal{transition:none!important}}
+.motion-ready .motion-reveal,.horizontal-story .motion-reveal,.js-motion .reveal{transform:none!important;translate:none!important}
+/* Schnur: Kapitel mit eigenem Freiraum für die Schnur behalten ihre ursprünglichen Höhen-Abstände (nur seitlich Raster) */
+.horizontal-story main>section.statement{padding:clamp(100px,14vh,150px) var(--s5) clamp(180px,27vh,290px)!important}
+.horizontal-story main>section.contact{padding:clamp(92px,13vh,120px) var(--s5) clamp(20px,4vh,44px)!important}
+.horizontal-story .contact h2{line-height:1!important}
+/* Niedrige Desktop-Fenster: eine Stufe kleiner, damit Texte nicht in die Bahn der Schnur reichen */
+@media(min-width:1000px) and (max-height:820px){:root{--t4:24px;--t5:44px;--t6:64px}.horizontal-story main>section:not(.hero):not(.statement):not(.contact){padding-top:104px!important}}
+@media(min-width:1000px) and (max-height:820px){.horizontal-story .fact{padding-bottom:var(--s2)!important;margin-bottom:var(--s2)!important}.horizontal-story .fact h3{margin:0 0 var(--s1)!important}.horizontal-story .conditions h2{margin-bottom:var(--s2)!important}}
+.horizontal-story .opening .thread-art span{top:16%}
+footer small.copyright{display:inline-block;margin:0 var(--s3) 0 0;opacity:.75;white-space:nowrap}
+@media(max-width:999px){footer>div:last-child{flex-wrap:wrap}footer small.copyright{flex-basis:100%;margin:0 0 var(--s2)}}
+
+footer small.copyright .credit{margin-left:.35em}footer small.copyright a{color:inherit;text-decoration:none;display:inline;font-size:inherit!important}
+@media(min-width:1000px) and (max-width:1279px){footer small.copyright .credit{display:block;margin-left:0}footer small.copyright .sep{display:none}}
+@media(min-width:1000px) and (max-width:1099px){footer small.copyright{margin-right:var(--s2)}}
+@media(max-width:999px){footer small.copyright{white-space:normal}footer small.copyright .credit{display:block;margin-left:0}footer small.copyright .sep{display:none}}
+
+/* Footer-Zeilen wie maach.studio-Beispiel: Versalien, gesperrt, zweizeilig, Link in Akzentfarbe mit feiner Linie */
+footer small.copyright{text-transform:uppercase;letter-spacing:.14em;line-height:1.7;opacity:1;color:rgba(214,207,227,.72);white-space:nowrap}
+footer small.copyright .credit{display:block;margin-left:0}
+footer small.copyright a{color:var(--lime);border-bottom:1px solid rgba(187,168,221,.55);padding-bottom:1px;transition:border-color var(--dur-ui) var(--ease)}
+footer small.copyright a:is(:hover,:focus-visible){border-bottom-color:var(--lime)}
+@media(max-width:999px){footer small.copyright{white-space:normal}}
+@media(max-width:1439px){footer small.copyright .rights{display:block}footer small.copyright .rights .sep{display:none}}
+@media(min-width:1000px) and (max-width:1279px){footer small.copyright{letter-spacing:.1em}}
+@media(min-width:1000px) and (max-width:1199px){.horizontal-story .contact footer>div:last-child{flex-wrap:wrap;justify-content:flex-start;max-width:300px;row-gap:var(--s1)}.horizontal-story .contact footer small.copyright{flex-basis:100%;margin:0}}
